@@ -6,24 +6,56 @@
     <p id = "array"></p>
 </body>
 <script>
-    let fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+    //creating an array
+    let fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
     document.getElementById("array").innerHTML = fruits;
 
+    //displaying first item
     let apple = fruits[0];
         document.getElementById("array").innerHTML = apple;
+
+        //number of items in the array
     let len = fruits.length;
         document.getElementById("array").innerHTML = len;
+
+        //remove last item
     let last = fruits[len - 1];
     document.getElementById("array").innerHTML = last;
     
+     //displaying items with index
     fruits.forEach((item, index, array) => {console.log(item, index);});
+   document.getElementById("array").innerHTML = fruits.toString();
 
-    document.getElementById("array").innerHTML = fruits.toString();
-
+    //remove an item
     let last1 = fruits.pop();
     document.getElementById("array").innerHTML = last1;
 
+    //last new item
     let last2 = fruits[fruits.length - 1];
     console.log(last2);
+
+    //add an item
+    fruits.push("Mangoes");
+    document.getElementById("array").innerHTML = fruits;
+
+    //remove the first item
+    fruits.shift();
+    document.getElementById("array").innerHTML = fruits;
+
+    //inserting an item at the beginning
+    fruits.unshift("Guavas");
+    document.getElementById("array").innerHTML = fruits;
+
+    //creating and merging two arrays
+    let shoes = ["Nike", "Adidas", "Puma"];
+    let allShoes = fruits.concat(shoes);
+    document.getElementById("array").innerHTML = allShoes;
+
+    allShoes.sort();
+    document.getElementById("array").innerHTML = allShoes;
+
+    allShoes.reverse();
+    document.getElementById("array").innerHTML = allShoes;
+
 </script>
 </html>
