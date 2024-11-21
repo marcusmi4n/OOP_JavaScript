@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+           let cv = prompt('ENTER COST VALUE');
+           let sv = prompt('ENTER SCRAP VALUE');
+           let  eny = prompt('ENTER ESTIMATED NO. OF YEARS OF USEFUL LIFE');
+
+           dpa = (parseInt(cv) - parseInt(sv)) / parseInt(eny);
+
+           alert('DEPRECIATION PER ANNUM = '+dpa);
+
+            yu = prompt('ENTER NO. OF YEARS OF USED');
+           av = parseInt(dpa) * parseInt(yu);
+
+           alert('ACCCUMULATED VALUE = '+av);
+
+           nv = parseInt(cv) - parseInt(av);
+
+           alert('NETBOOK VALUE = '+nv);
+           
+        </script>
+    </head>
+  <body>
+
+  </body>
+</html>

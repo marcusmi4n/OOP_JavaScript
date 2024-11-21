@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript">
+          alert('TRANSACTION SYSTEM');
+
+          item1_n = prompt('ENTER ITEM 1 NAME');
+          item1_p = prompt('ENTER ITEM 1 PRICE');
+          item1_q = prompt('ENTER ITEM 1 QUANTITY PURCHASED');
+          //item1_d = prompt('ENTER ITEM 1 DISCOUNT ');
+          
+          tots_price = parseInt(item1_p) * parseInt(item1_q);
+
+          alert('TOTAL PRICE  FOR '+item1_n+'s = '+ tots_price);
+
+          item2_n = prompt('ENTER ITEM 2 NAME');.0
+          item2_p = prompt('ENTER ITEM 2 PRICE');
+          item2_q = prompt('ENTER ITEM 2 QUANTITY PURCHASED');
+          
+        
+          tots_price2 = parseInt(item2_p) * parseInt(item2_q);
+
+          alert('TOTAL PRICE  FOR ' + item2_n +'s = '+ tots_price2);
+        
+
+          item_d = prompt('ENTER DISCOUNT ');
+
+          tots = (parseInt(tots_price) + parseInt(tots_price2));
+        
+          discount = (parseInt(item_d) / 100) * parseInt(tots);
+
+          total = parseInt(tots) - parseInt(discount);
+
+          alert('TOTAL PRICE FOR BOTH ITEMS = '+ total);
+
+        </script>
+    </head>
+  <body>
+
+  </body>
+</html>
