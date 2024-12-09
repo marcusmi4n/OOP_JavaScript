@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ministry of ICT & National Guidance</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #greeting {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Welcome to the Ministry of ICT & National Guidance</h1>
+	<input id="name" type="text" placeholder="Enter your name">
+	<button id="ok-btn">OK</button>
+	<p id="greeting"></p>
+
+	<script>
+     okBtn = document.getElementById('ok-btn');
+     nameInput = document.getElementById('name');
+     greetingElement = document.getElementById('greeting');
+
+    okBtn.addEventListener('click', () => {
+	name = nameInput.value.trim();
+	currentTime = new Date().getHours();
+	let greeting;
+
+	if (currentTime >= 0 && currentTime < 12) {
+		greeting = `Good morning, ${name}!`;
+	} else if (currentTime >= 12 && currentTime < 17) {
+		greeting = `Good afternoon, ${name}!`;
+	} else {
+		greeting = `Good evening, ${name}!`;
+	}
+
+	greetingElement.textContent = greeting;
+});
+
+    </script>
+</body>
+</html>

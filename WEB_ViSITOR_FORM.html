@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+        <script>
+            nameInput = document.getElementById('name.input');
+            subm = document.getElementById('ok-btn');
+            subm.addEventListener('click', function() {
+                let name = name.value;
+                if (currentTime >= 0 && currentTime < 12) {
+                    greeting = `Good morning, ${name}!`;
+                } else if (currentTime >= 12 && currentTime < 17) {
+                    greeting = `Good afternoon, ${name}!`;
+                } else {
+                    greeting = `Good evening, ${name}!`;
+                }
+            });
+           
+            
+        
+            greetingElement.textContent = greeting;
+        
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to the Ministry of ICT & National Guidance</h1>
+        <input id="name" type="text" placeholder="Enter your name">
+        <button id="ok-btn">OK</button>
+        <p id="greeting"></p>
+    </body>
+   
+</html> 
