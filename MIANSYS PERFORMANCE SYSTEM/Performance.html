@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MIANSYS RESULTS</title>
-        <script type="text/javascript>
+        <title>MIANSYS RESULTS CHECKER</title>
         
-        </script>
     </head>
     <body>
         <h1 align = center>MIANSYS RESULTS</h1>
-        <p>Name: John Doe</p>
-        <p>Roll No.: 12345</p>
-        <p>Course: Computer Science</p>
-        <p>Percentage: 90%</p>
-        <p>Grade: Performance</p>
+        <p>Name: <strong id ="name"></p>
+        <p>Roll No.: <strong id ="regno"></p>
+        <p>Course: <strong id ="Course"></p>
+        <p>Percentage: <strong id ="perc"></p>
+        <p>Grade: <strong id ="grade"></p>
     </body>
+    <script>
+        let name = prompt(" ENTER NAME:");
 
+        document.getElementById("name").innerHTML = name;
+
+        let rollno = prompt("Roll No:");
+
+        document.getElementById("regno").innerHTML = rollno;
+
+        let course = prompt("ENTER COURSE:");
+
+        document.getElementById("Course").innerHTML = course;
+
+
+        var marks = prompt("ENTER COURSE MARKS(40)");
+        var mrks = prompt("ENTER EXAM MARKS(60)");
+        var total = parseInt(marks) + parseInt(mrks);
+        var percentage = (total / 100) * 100;
+
+        document.getElementById("perc").innerHTML = percentage + "%";
+
+        if (percentage < 49) {
+            //alert("Poor performance");
+            document.getElementById("grade").innerHTML = "Poor performance";
+        } else if (percentage < 75) {
+            //alert("Fair performance");
+            document.getElementById("grade").innerHTML = "Fair performance";
+        } else if (percentage > 75) {
+            //alert("Good performance");
+            document.getElementById("grade").innerHTML = "Good performance";
+        }
+
+
+    </script>
 </html>
